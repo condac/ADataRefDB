@@ -69,14 +69,14 @@ make -s clean
 OS=LINUX CFLAGS=-m64 LDFLAGS=-m64 TARGET=$TARGETDIR/64/lin.xpl make -s
 
 # build Windows32 version
-#echo "#### Windows 32"
-#make -s clean
-#OS=WINDOWS CC=i686-w64-mingw32-gcc TARGET=$TARGETDIR/32/win.xpl make -s
+echo "#### Windows 32"
+make -s clean
+OS=WINDOWS CC=i686-w64-mingw32-gcc TARGET=$TARGETDIR/32/win.xpl make -s
 
 # build Windows64 version
-#echo "#### Windows64"
-#make -s clean
-#OS=WINDOWS64 CC=x86_64-w64-mingw32-gcc TARGET=$TARGETDIR/64/win.xpl make -s
+echo "#### Windows64"
+make -s clean
+OS=WINDOWS64 CC=x86_64-w64-mingw32-gcc TARGET=$TARGETDIR/64/win.xpl make -s
 
 # build hybrid OSX version
 ##make clean

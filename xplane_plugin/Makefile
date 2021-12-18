@@ -16,7 +16,7 @@ INC += -ISDK/CHeaders/XPLM -ISDK/CHeaders/Widgets
 CFLAGS += -Wall -O2 -fPIC -D$(OS) $(INC) -fvisibility=hidden -DDEBUGLOG
 LDFLAGS += -Wl,--version-script=exports.txt
 LDDYNFLAGS += -shared
-LIBS += -ludev -lpthread -lrt -lGLEW -lglut
+LIBS += -ludev -lpthread -lrt 
 TARGET ?= lin.xpl
 
 else ifeq ($(OS), MACOSX)
@@ -42,7 +42,7 @@ INC += -ISDK2/CHeaders/XPLM -ISDK2/CHeaders/Widgets -I/mingw32/include
 CFLAGS += -Wall -O2 -D$(OS) $(INC) -g
 LDFLAGS += -Wl,--version-script=exports.txt -g
 LDDYNFLAGS += -shared
-LIBS += SDK2/Libraries/Win/XPLM.lib -lhid -lsetupapi -lwsock32 -lopengl32 -lglu32
+LIBS += SDK2/Libraries/Win/XPLM.lib -lhid -lsetupapi 
 TARGET ?= win.xpl
 
 else ifeq ($(OS), WINDOWS64)
@@ -53,7 +53,7 @@ INC += -ISDK/CHeaders/XPLM -ISDK/CHeaders/Widgets -I/mingw64/include
 CFLAGS += -Wall -O2 -D$(OS) $(INC)
 LDFLAGS += -Wl,--version-script=exports.txt
 LDDYNFLAGS += -shared
-LIBS += SDK/Libraries/Win/XPLM_64.lib -lhid -lsetupapi -lwsock32 -lopengl32 -lglu32
+LIBS += SDK/Libraries/Win/XPLM_64.lib -lhid -lsetupapi 
 TARGET ?= win.xpl
 endif
 
