@@ -98,14 +98,10 @@ int initDataRefs() {
     //lTmp += findDataRef("sim/flightmodel/position/theta", &drPitch);
     // lTmp += findDataRef("sim/flightmodel/position/theta", &drPitch);
     createIntDR("drdb/test/working0");
-    for (int i = 0; i < nrOfInts; i++) {
-        createIntDR(intList[i]);
-    }
-    createIntDR("drdb/test/working2");
-    createIntDR("JAS/test/working2");
-    createIntDR("JAS/test/working22");
-    createIntDR("JAS/test/working23");
-    createFloatDR("JAS/test/working24");
+    // for (int i = 0; i < nrOfInts; i++) {
+    //     createIntDR(intList[i]);
+    // }
+    createFloatDR("drdb/test/working2");
 
     return lTmp;
 }

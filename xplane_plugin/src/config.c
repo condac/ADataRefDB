@@ -54,9 +54,9 @@ void parseLine(char* line) {
     if (res2 == 5) {
         debugLog("found dataref: name %s\t type %s\t unit %s\t desc %s\n", name, type, unit, desc);
         if (strncmp("int", type, 3) == 0) {
-            //createIntDR(name);
-            sprintf(intList[nrOfInts], "%s", name);
-            nrOfInts++;
+            createIntDR(name);
+            // sprintf(intList[nrOfInts], "%s", name);
+            // nrOfInts++;
         }
         if (strncmp("float", type, 5) == 0) {
             createFloatDR(name);
