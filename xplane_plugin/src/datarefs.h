@@ -7,14 +7,6 @@
 #include "XPLMPlugin.h"
 #include "XPLMPlanes.h"
 
-extern int nrOfInts;
-extern int nrOfFloats;
-
-extern char intList[][512];
-extern char floatList[][512];
-
-int findDataRef(const char* name, XPLMDataRef* result);
-
 int registerDataRefs();
 
 int initDataRefs();

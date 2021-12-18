@@ -6,22 +6,6 @@
 XPLMDataRef drPitch;
 
 int nrInList = 0;
-int nrOfInts = 0;
-int nrOfFloats = 0;
-
-char intList[100][512];
-char floatList[100][512];
-
-int findDataRef(const char* name, XPLMDataRef* result) {
-    *result = XPLMFindDataRef(name);
-    if (*result == NULL) {
-        debugLog("Error finding XPL variable ");
-        debugLog(name);
-        debugLog("\n");
-        return -1;
-    }
-    return 0;
-}
 
 int createIntDR(const char* name) {
 
@@ -92,18 +76,12 @@ int createFloatDR(const char* name) {
 }
 
 int initDataRefs() {
-    int lTmp;
-    /* Also look up our data refs. */
-    lTmp = 0;
-    //lTmp += findDataRef("sim/flightmodel/position/theta", &drPitch);
-    // lTmp += findDataRef("sim/flightmodel/position/theta", &drPitch);
+
     createIntDR("drdb/test/working0");
-    // for (int i = 0; i < nrOfInts; i++) {
-    //     createIntDR(intList[i]);
-    // }
+
     createFloatDR("drdb/test/working2");
 
-    return lTmp;
+    return 1;
 }
 
 void unregisterData() {
