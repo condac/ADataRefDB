@@ -12,7 +12,7 @@ int createIntDR(const char* name) {
     int* valuepointer;
     valuepointer = malloc(sizeof(int));
     nrInList++;
-    *valuepointer = nrInList;
+    *valuepointer = 0;
     debugLog("pointer create .%s. value %d mem %d\n", name, nrInList, valuepointer);
     XPLMDataRef customDR = XPLMRegisterDataAccessor(name,
                                                     xplmType_Int, // The types we support
